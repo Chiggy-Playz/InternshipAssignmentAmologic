@@ -1,12 +1,13 @@
 import 'dart:async';
-import 'dart:ui';
 
 import 'package:amologic_assignment/extensions.dart';
 import 'package:amologic_assignment/widgets/gradient_button.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:glass_kit/glass_kit.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -291,7 +292,36 @@ class _LoginViewState extends ConsumerState<LoginView> {
     );
   }
 
-  Future<void> googleLoginPressed() async {}
+  Future<void> googleLoginPressed() async {
+    GoogleSignIn _googleSignIn = GoogleSignIn(
+      scopes: ["email"],
+    );
+
+    try {
+      final account = await _googleSignIn.signIn();
+
+      if (account == null) {
+        if (!mounted) return;
+        context.showErrorSnackBar(message: "Not signed in.");
+        return;
+      }
+
+      final auth = await account.authentication;
+      final credential = GoogleAuthProvider.credential(
+        accessToken: auth.accessToken,
+        idToken: auth.idToken,
+      );
+
+      await FirebaseAuth.instance.signInWithCredential(credential);
+      if (!mounted) return;
+      context.showSnackBar(message: "Welcome back ${account.displayName}");
+    } catch (error) {
+      debugPrint(error.toString());
+      if (!mounted) return;
+      context.showErrorSnackBar(message: "Google Sign In Failed!");
+      return;
+    }
+  }
 
   Future<void> signInPressed() async {
     context.showSnackBar(message: "Not Implemented Yet!");

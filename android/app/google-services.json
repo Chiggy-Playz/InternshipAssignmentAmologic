@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "993270945828",
+    "project_id": "internshipamologic",
+    "storage_bucket": "internshipamologic.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:993270945828:android:447f8f59b1a45d693ea0b1",
+        "android_client_info": {
+          "package_name": "com.chiggy.internships.amologic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "993270945828-pimaev623tc617hoibbce33jd6mld5ru.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.chiggy.internships.amologic",
+            "certificate_hash": "98d9adb6473a554e2085deb2598eb07f5391395f"
+          }
+        },
+        {
+          "client_id": "993270945828-kn4clnbb1tj6hbd516ofnn2hvn9kdag7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOHNHzX1vWrzWZxCfoGjVMeHGIOvSLs98"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "993270945828-kn4clnbb1tj6hbd516ofnn2hvn9kdag7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "993270945828-ka920ot354bqq5rucsja2ehbkm3q83bj.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.amologicAssignment"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
