@@ -288,5 +288,43 @@ ThemeData updateTheme(ThemeData theme) {
     inputDecorationTheme: const InputDecorationTheme(
       border: OutlineInputBorder(),
     ),
+    chipTheme: ChipThemeData(
+      showCheckmark: false,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10),
+      ),
+      color: WidgetStateColor.resolveWith(
+        (states) {
+          if (states.contains(WidgetState.selected)) {
+            return theme.colorScheme.primaryContainer;
+          } else {
+            return const Color(0xFFF6F6F6);
+          }
+        },
+      ),
+      labelStyle: theme.textTheme.titleMedium!.copyWith(
+        fontWeight: FontWeight.bold,
+        color: WidgetStateColor.resolveWith(
+          (states) {
+            if (states.contains(WidgetState.selected)) {
+              return Colors.black;
+            }
+            return const Color(0xFF252525);
+          },
+        ),
+      ),
+      side: WidgetStateBorderSide.resolveWith(
+        (states) {
+          if (states.contains(WidgetState.selected)) {
+            return BorderSide(
+              color: const Color(0xFFF1E5E5).withOpacity(0.22),
+              width: 2.0,
+            );
+          } else {
+            return BorderSide.none;
+          }
+        },
+      ),
+    ),
   );
 }

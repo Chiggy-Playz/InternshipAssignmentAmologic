@@ -37,4 +37,9 @@ extension DateTimeExtension on DateTime {
     // dd/MM/yyyy
     return '${day.toString().padLeft(2, '0')}/${month.toString().padLeft(2, '0')}/$year';
   }
+
+  String fromNow() {
+    // Implement logic for relative time
+    return "Tomorrow at 07:00 AM";
+  }
 }

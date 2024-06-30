@@ -14,6 +14,7 @@ class HealthyPetApp extends ConsumerWidget {
       title: 'HealthyPet',
       darkTheme: darkTheme,
       themeMode: ThemeMode.dark,
+      debugShowCheckedModeBanner: false,
     );
   }
 }
