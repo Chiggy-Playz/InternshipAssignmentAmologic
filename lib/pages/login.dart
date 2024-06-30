@@ -1,12 +1,14 @@
 import 'dart:async';
 
 import 'package:amologic_assignment/extensions.dart';
+import 'package:amologic_assignment/pages/add_personal_details.dart';
 import 'package:amologic_assignment/widgets/gradient_button.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:glass_kit/glass_kit.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class LoginPage extends StatelessWidget {
@@ -315,6 +317,7 @@ class _LoginViewState extends ConsumerState<LoginView> {
       await FirebaseAuth.instance.signInWithCredential(credential);
       if (!mounted) return;
       context.showSnackBar(message: "Welcome back ${account.displayName}");
+      context.go(AddPersonalDetailsPage.path);
     } catch (error) {
       debugPrint(error.toString());
       if (!mounted) return;

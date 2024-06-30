@@ -281,4 +281,12 @@ var theme = const MaterialTheme(TextTheme());
 
 ThemeData lightTheme = theme.light();
 
-ThemeData darkTheme = theme.dark();
+ThemeData darkTheme = updateTheme(theme.dark());
+
+ThemeData updateTheme(ThemeData theme) {
+  return theme.copyWith(
+    inputDecorationTheme: const InputDecorationTheme(
+      border: OutlineInputBorder(),
+    ),
+  );
+}
