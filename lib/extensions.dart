@@ -7,4 +7,27 @@ extension ContextExtension on BuildContext {
   Size get size => MediaQuery.of(this).size;
   double get width => size.width;
   double get height => size.height;
+
+  void showSnackBar({
+    required String message,
+  }) {
+    ScaffoldMessenger.of(this).showSnackBar(
+      SnackBar(
+        content: Text(message),
+        behavior: SnackBarBehavior.floating,
+      ),
+    );
+  }
+
+  void showErrorSnackBar({
+    required String message,
+  }) {
+    ScaffoldMessenger.of(this).showSnackBar(
+      SnackBar(
+        content: Text(message),
+        backgroundColor: colorScheme.error,
+        behavior: SnackBarBehavior.floating,
+      ),
+    );
+  }
 }

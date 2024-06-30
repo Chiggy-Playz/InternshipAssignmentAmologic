@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="16.335888"
+   height="19.390081"
+   viewBox="0 0 16.335888 19.390081"
+   fill="none"
+   version="1.1"
+   id="svg3"
+   sodipodi:docname="apple.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview3"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="30.719861"
+     inkscape:cx="3.5481931"
+     inkscape:cy="12.223362"
+     inkscape:window-width="2560"
+     inkscape:window-height="1369"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g1" />
+  <g
+     filter="url(#a)"
+     id="g1"
+     transform="translate(-3.0251121,-0.932)">
+    <path
+       d="m 16.636,19.544 c -1.056,1.023 -2.208,0.862 -3.317,0.377 -1.174,-0.495 -2.252,-0.517 -3.49,0 -1.551,0.668 -2.37,0.474 -3.296,-0.377 -5.256,-5.418 -4.48,-13.668 1.486,-13.97 1.454,0.076 2.467,0.797 3.318,0.862 1.27,-0.258 2.488,-1.002 3.845,-0.905 1.626,0.13 2.854,0.776 3.662,1.939 -3.36,2.014 -2.564,6.441 0.517,7.68 -0.614,1.615 -1.411,3.22 -2.736,4.405 z M 11.229,5.51 c -0.162,-2.402 1.788,-4.384 4.028,-4.578 0.313,2.78 -2.52,4.847 -4.028,4.578"
+       fill="#ffffff"
+       id="path1" />
+  </g>
+  <defs
+     id="defs3">
+    <filter
+       id="a"
+       x="0.041999999"
+       y="0.93199998"
+       width="22.302"
+       height="25.356001"
+       filterUnits="userSpaceOnUse"
+       color-interpolation-filters="sRGB">
+      <feFlood
+         flood-opacity="0"
+         result="BackgroundImageFix"
+         id="feFlood1" />
+      <feColorMatrix
+         in="SourceAlpha"
+         values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+         result="hardAlpha"
+         id="feColorMatrix1" />
+      <feOffset
+         dy="2.983"
+         id="feOffset1" />
+      <feGaussianBlur
+         stdDeviation="1.492"
+         id="feGaussianBlur1" />
+      <feComposite
+         in2="hardAlpha"
+         operator="out"
+         id="feComposite1" />
+      <feColorMatrix
+         values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.09 0"
+         id="feColorMatrix2" />
+      <feBlend
+         in2="BackgroundImageFix"
+         result="effect1_dropShadow_1_2549"
+         id="feBlend2"
+         mode="normal" />
+      <feBlend
+         in="SourceGraphic"
+         in2="effect1_dropShadow_1_2549"
+         result="shape"
+         id="feBlend3"
+         mode="normal" />
+    </filter>
+  </defs>
+</svg>
