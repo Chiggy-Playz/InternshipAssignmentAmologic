@@ -1,6 +1,7 @@
-import 'package:amologic_assignment/extensions.dart';
+import 'package:amologic_assignment/core/extensions.dart';
+import 'package:amologic_assignment/core/icons.dart';
 import 'package:amologic_assignment/pages/login.dart';
-import 'package:amologic_assignment/router.dart';
+import 'package:amologic_assignment/core/router.dart';
 import 'package:amologic_assignment/widgets/hollow_bubble.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -35,11 +36,7 @@ class SplashScreenPage extends ConsumerWidget {
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           const Icon(
-                            IconData(
-                              0xe800,
-                              fontFamily: 'AmologicIcons',
-                              fontPackage: null,
-                            ),
+                            AmologicIcons.healthypet,
                             size: 20,
                           ),
                           const SizedBox(width: 25),

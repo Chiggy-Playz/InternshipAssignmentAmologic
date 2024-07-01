@@ -1,4 +1,4 @@
-import 'package:amologic_assignment/extensions.dart';
+import 'package:amologic_assignment/core/extensions.dart';
 import 'package:flutter/material.dart';
 
 class CircularContainer extends StatelessWidget {

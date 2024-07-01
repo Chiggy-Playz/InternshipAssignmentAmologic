@@ -1,4 +1,5 @@
-import 'package:amologic_assignment/extensions.dart';
+import 'package:amologic_assignment/core/extensions.dart';
+import 'package:amologic_assignment/core/icons.dart';
 import 'package:amologic_assignment/widgets/hollow_bubble.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -46,6 +47,7 @@ class HomeShell extends ConsumerWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Hello, Human!"),
+        forceMaterialTransparency: true,
         actions: [
           IconButton(
             onPressed: () {},
@@ -152,15 +154,26 @@ class _HomeViewState extends ConsumerState<HomeView> {
                 ],
               ),
             ),
-            // ListView(
-            //   shrinkWrap: true,
-            //   children: [
-            //     Card(
-            //       elevation: 0,
-            //       child: ,
-            //     )
-            //   ],
-            // ),
+            ListView(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              children: const [
+                DoctorCard(
+                  doctorName: "Dr Stone",
+                  imagePath: "assets/images/doc1.png",
+                  services: ["Surgery", "Vaccine"],
+                  distance: "10km",
+                  availableFor: [PetType.cat, PetType.dog],
+                ),
+                DoctorCard(
+                  doctorName: "Dr Vanessa",
+                  imagePath: "assets/images/doc2.png",
+                  services: ["Surgery", "Vaccine"],
+                  distance: "10km",
+                  availableFor: [PetType.cat, PetType.dog],
+                ),
+              ],
+            ),
           ],
         ),
       ),
@@ -368,6 +381,104 @@ class UpcomingVaccinationWidget extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+}
+
+enum PetType { cat, dog }
+
+class DoctorCard extends StatelessWidget {
+  const DoctorCard({
+    super.key,
+    required this.doctorName,
+    required this.imagePath,
+    required this.services,
+    required this.distance,
+    required this.availableFor,
+  });
+
+  final String doctorName;
+  final String imagePath;
+  final List<String> services;
+  final String distance;
+  final List<PetType> availableFor;
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.all(24.0),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Image.asset(
+              imagePath,
+              height: 130,
+            ),
+            const SizedBox(width: 16),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    doctorName,
+                    style: context.textTheme.titleLarge!.copyWith(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                    "Services: ${services.join(", ")}",
+                    style: context.textTheme.bodyMedium!.copyWith(
+                      color: const Color(0xFFA4A4A4),
+                    ),
+                  ),
+                  const SizedBox(height: 8),
+                  Row(
+                    children: [
+                      const Icon(Icons.pin_drop_outlined),
+                      const SizedBox(width: 4),
+                      Text(
+                        distance,
+                        style: context.textTheme.bodyMedium!.copyWith(
+                          color: const Color(0xFFA4A4A4),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 8),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: const Text(
+                          "Available for",
+                          style: TextStyle(
+                            color: Color(0xFF50CC98),
+                          ),
+                        ),
+                      ),
+                      ...availableFor.map((petType) {
+                        switch (petType) {
+                          case PetType.cat:
+                            return Icon(
+                              AmologicIcons.cat,
+                              color: context.colorScheme.primaryContainer,
+                            );
+                          case PetType.dog:
+                            return Icon(
+                              AmologicIcons.dog,
+                              color: context.colorScheme.primaryContainer,
+                            );
+                        }
+                      })
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

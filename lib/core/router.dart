@@ -13,7 +13,7 @@ part 'router.g.dart';
 @riverpod
 GoRouter router(RouterRef ref) {
   return GoRouter(
-    initialLocation: "/home",
+    initialLocation: "/splash_screen",
     routes: [
       GoRoute(
         path: SplashScreenPage.path,
