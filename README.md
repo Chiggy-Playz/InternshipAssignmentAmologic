@@ -1,16 +1,21 @@
-# amologic_assignment
+# Amologic Assignment - HealthyPet
 
-A new Flutter project.
+Made for the assignment of Amologic Internship.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Download the binary from the [release](https://github.com/Chiggy-Playz/InternshipAssignmentAmologic/releases) section. 
 
-A few resources to get you started if this is your first Flutter project:
+Or you can build the project yourself by following the steps below.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Building the project
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Clone the repository
+- Run the following command to install the dependencies
+```bash
+flutter pub get
+```
+- Run the following command to run the project
+```bash
+flutter run
+```
